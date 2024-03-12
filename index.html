@@ -3,156 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <title>Buttons</title>
-    <style>
-        body
-        {
-            background-color:#2D3250;
-            display: grid;
-            place-items: center;
-            height: 100vh;
-        }
-        .button
-        {
-            background-color:#7077A1;
-            text-align: center;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            transition:0.5s;
-        }
-        #Black:hover,.Black
-        {
-            box-shadow:
-                0 0 5px white, 
-                0 0 10px white, 
-                0 0 15px white, 
-                0 0 20px black, 
-                0 0 30px black, 
-                0 0 40px black,
-                0 0 55px black, 
-                0 0 75px black;  
-            background-color: black;
-            color: white;
-            transform: scale(1.1);
-            font-weight: bolder;
-            font-size: 1.5rem;
-            transition:0.5s;
-        }
-        #Orange:hover,.Orange
-        {
-            box-shadow:
-                0 0 5px white, 
-                0 0 10px white, 
-                0 0 15px white, 
-                0 0 20px #FF8400, 
-                0 0 30px #FF8400, 
-                0 0 40px #FF8400,
-                0 0 55px #FF8400, 
-                0 0 75px #FF8400;  
-            background-color: #FF8400;
-            color: white;
-            transform: scale(1.1);
-            font-weight: bolder;
-            font-size: 1.5rem;
-            transition:0.5s;
-        }
-        #Magenta:hover,.Magenta
-        {
-            box-shadow:
-                0 0 5px white, 
-                0 0 10px white, 
-                0 0 15px white, 
-                0 0 20px #F11A7B, 
-                0 0 30px #F11A7B, 
-                0 0 40px #F11A7B,
-                0 0 55px #F11A7B, 
-                0 0 75px #F11A7B;  
-            background-color: #F11A7B;
-            color: white;
-            transform: scale(1.1);
-            font-weight: bolder;
-            font-size: 1.5rem;
-            transition:0.5s;
-        }
-        #Purple:hover,.Purple
-        {
-            box-shadow:
-                0 0 5px white, 
-                0 0 10px white, 
-                0 0 15px white, 
-                0 0 20px #B15EFF, 
-                0 0 30px #B15EFF, 
-                0 0 40px #B15EFF,
-                0 0 55px #B15EFF, 
-                0 0 75px #B15EFF;  
-            background-color: #B15EFF;
-            color: white;
-            transform: scale(1.1);
-            font-weight: bolder;
-            font-size: 1.5rem;
-            transition:0.5s;
-        }
-        .button-row
-        {
-            padding-left:35rem;
-            padding-right:35rem;
-        }
-        /* For label*/
-        #lable
-        {
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: #E5DFDF;
-            text-align: center;
-            font-size:0rem;
-            .neon
-            {
-                text-shadow: 
-                    0 0 5px white, 
-                    0 0 10px white, 
-                    0 0 15px white, 
-                    0 0 20px #B15EFF, 
-                    0 0 30px #B15EFF, 
-                    0 0 40px #B15EFF,
-                    0 0 55px #B15EFF, 
-                    0 0 75px #B15EFF;  
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Actual Hovering Content -->
-    <div class="button-row container-sm row">
-        <div class="button btn p-3" id="Black">
-            Black
-        </div>
-        <div class="button btn p-3" id="Orange">
-            Orange
-        </div>
-        <div class="button btn p-3" id="Magenta">
-            Magenta
-        </div>
-        <div class="button btn p-3" id="Purple" onclick="lableAnimation()">
-            Purple
-        </div>
+    <div class="button" id="Black">
+        Black
+    </div>
+    <div class="button" id="Orange">
+        Orange
+    </div>
+    <div class="button" id="Magenta">
+        Magenta
+    </div>
+    <div class="button" id="Purple" onclick="lableAnimation()">
+        Purple
     </div>
     <!--For naming-->
     <div id="lable">
         Button Hover Effect <br> with 
         <p class="neon">Neon Lights</p>
     </div>
-    <script>
-        /*For label animations*/
-        function  lableAnimation()
-        {
-            var lable = document.getElementById("lable");
-            lable.style.fontSize="3rem";
-            lable.style.transition="2s";
-            document.getElementById("Black").classList.add("Black");
-            document.getElementById("Orange").classList.add("Orange");
-            document.getElementById("Magenta").classList.add("Magenta");
-            document.getElementById("Purple").classList.add("Purple");
-        }
-        </script>
+    <script src="script.js"></script>
 </body>
 </html>
